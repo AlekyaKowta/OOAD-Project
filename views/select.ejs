@@ -7,7 +7,7 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-
+    <script src="../src/weatherChecker.js"></script>
     <title>Select</title>
     <style>
         .card-box1,.card-box2,.card-box3{
@@ -19,10 +19,7 @@
             margin:5px;
         }
 
-        #BandC,#NandF,#MandP{
-            display: none;
-
-        }
+        
     </style>
   </head>
   <body>
@@ -86,7 +83,7 @@
             <div class="card-body">
               <h5 class="card-title">Paris</h5>
               <a href="#" class="btn btn-primary pd">Passenger Flow</a>
-              <a href="#" class="btn btn-success pd" onclick="getWeatherP();">Check Weather</a>
+              <a href="#" class="btn btn-success pd" onClick="getWeatherP();"> Check Weather</a>
             </div>
           </div>
       </div>
@@ -110,20 +107,9 @@
             </div>
           </div>
       </div>
-      <div id="BandC"  class="alert alert-info"></div>
+      <div id="BandC" class="alert alert-info"></div>
 
-      <script>
-        function getWeatherP(){
-        const url="https://api.openweathermap.org/data/2.5/weather?q=paris&appid=fc33fdb0ab909d33be87681a9f67aaba";
-        fetch(url)
-        .then(response=>{
-          return response.json();
-        })
-        .then(newJson=>{
-          console.log(newJson.weather[0].description);
-        });
-        }
-      </script>
+     
 
       
 
