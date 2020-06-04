@@ -1,0 +1,23 @@
+.jumbotron{
+    background-color: aquamarine;
+}
+
+.container-loginform{
+    text-align: center;
+    border:2px solid aqua;
+    border-radius: 20px;
+    padding:50px;
+}
+.container-signupform{
+    text-align: center;
+    border:2px solid aqua;
+    border-radius: 20px;
+    margin-top: 200px;
+    padding:50px;
+    
+}
+
+.container-heading{
+    text-align: center;
+    font-weight: bolder;
+}
