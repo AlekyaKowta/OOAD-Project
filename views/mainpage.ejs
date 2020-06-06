@@ -17,6 +17,7 @@
         }
 
         .card-box{
+            margin-top:30px;
             display: flex;
             align-items: center;
         }
@@ -28,6 +29,18 @@
         .cp:active{
             color:white;
         }
+        #show{
+          margin:10px;
+          display: none;
+        }
+        .butn{
+          display: flex;
+          justify-content: center;
+        }
+        .flexx1,.flexx2{
+          display:flex;
+        }
+      
     </style>
 
     <title>Tour Guidee</title>
@@ -99,34 +112,69 @@
         </script>
         <br>
         <br>
+        <div class="butn"><button class="btn" onClick="showDiv();">Select</button></div>
+        
+        <div id="show">
+          <div class="container-fluid">
+            <h3> We've got everything covered for you!</h3>
+            <h5> Here are our top picks:</h5>
+            <ul>
+              <li> Hotel Paris Lafayette </li>
+              <li> Hotel Brittannique </li>
+              <li> Hotel Park Lane Paris </li>
+              <li> Hotel De Lille Louvre </li>
+            </ul>
+            <hr>
+            <div class="flexx1">
+              <h3> Here's the average cost for each hotel!</h3>
+              <img src="../images/avg_cost.jpeg" />
+              <h3> We've also done an analysis of time that it would take you to reach your destination!</h3>
+              <img src="../images/avg_time.jpeg" />
+            </div>
 
+            <div class="flexx2">
+              <h3> Are you wondering how long it'll take from your place?</h3>
+              <img src="../images/travel_time.jpeg"/>
+              <h3> And here's a summary of what that would cost you!</h3>
+              <img src="../images/avg_trans.jpeg" />
+            </div>
+            
+          </div>
+        </div>
+
+
+        <script>
+          function showDiv(){
+            document.getElementById("show").style.display="inline";
+           }
+        </script>
 <div class="container card-box">
 <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="../images/hotel1.jpg" alt="Card image cap">
     <div class="card-body">
-      <p class="card-text">A luxury getaway with spa facilities available!</p>
+      <p class="card-text"><h3> Hotel Paris Lafayette </h3>A luxury getaway with spa facilities available!</p>
       <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">Book</a>
     </div>
   </div>
   <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="../images/hotel2 (2).jpg" alt="Card image cap">
     <div class="card-body">
-      <p class="card-text">Feel free to have the time of your lives!</p>
+      <p class="card-text"><h3> Hotel Brittannique </h3>Feel free to have the time of your lives!</p>
       <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal1">Book</a>
     </div>
   </div>
   <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="../images/hotel3.jpg"alt="Card image cap">
     <div class="card-body">
-      <p class="card-text">A view and a comfy bed! What else do you need?</p>
-      <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal">Book</a>
+      <p class="card-text"> <h3> Hotel Park Lane Paris </h3>A view and a comfy bed! What else do you need?</p>
+      <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal2">Book</a>
     </div>
   </div>
   <div class="card" style="width: 18rem;">
     <img class="card-img-top" src="../images/hotel4.jpg" alt="Card image cap">
     <div class="card-body">
-      <p class="card-text">Free breakfasts in the morning to get you going!</p>
-      <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal1">Book</a>
+      <p class="card-text"> <h3> Hotel De Lille Louvre</h3>Free breakfasts in the morning to get you going!</p>
+      <a href="#" class="btn btn-dark" data-toggle="modal" data-target="#exampleModal3">Book</a>
     </div>
   </div>
 </div>
@@ -141,7 +189,7 @@
           </button>
         </div>
         <div class="modal-body">
-          Price : &#8377; 3456
+          Price : &#8377;19101 for 3 days!
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -161,7 +209,47 @@
           </button>
         </div>
         <div class="modal-body">
-          Price : &#8377; 4598
+          Price : &#8377;18789 for 3 days!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"> <a href="/payment" class="cp">Confirm and Pay</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Payment Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Price : &#8377;23208 for 3 days!
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary"> <a href="/payment" class="cp">Confirm and Pay</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="exampleModal3" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Payment Details</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          Price : &#8377;11535 for 3 days!
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
